@@ -1,0 +1,28 @@
+name: cuaca_kelurahan
+description: Prakiraan cuaca tingkat kelurahan/desa dari data terbuka BMKG (aplikasi tidak resmi).
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.7.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^1.2.2
+  geolocator: ^14.0.0
+  # Sengaja ^4.0.0 (bukan 5.x): API top-level placemarkFromCoordinates/setLocaleIdentifier
+  # yang dipakai kode ini tetap sama sampai 4.x. Versi 5.x memindahkannya ke kelas Geocoding.
+  geocoding: ^4.0.0
+  shared_preferences: ^2.3.3
+  url_launcher: ^6.3.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/wilayah_2022.csv
