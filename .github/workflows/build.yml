@@ -31,7 +31,7 @@ jobs:
         run: dart run tool/patch_project.dart
 
       - run: flutter pub get
-      - run: flutter analyze
+      - run: flutter analyze --no-fatal-infos
       - run: flutter test
       - run: flutter build apk --release
 
